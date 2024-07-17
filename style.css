@@ -42,10 +42,25 @@ body {
   object-fit: cover;
 }
 
+.logo-pc {
+  display: block;
+}
+
+.logo-m {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .menu-list {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 4rem;
   font-size: 2rem;
 }
 
@@ -59,4 +74,40 @@ body {
 
 .social-link i {
   color: #ac7de9;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .logo img {
+    width: 18rem;
+  }
+
+  .logo-pc {
+    display: none;
+  }
+
+  .logo-m {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menu-item:hover {
+    width: 100%;
+    background-color: #ac7de9;
+  }
+
+  .social-list {
+    display: none;
+  }
 }
